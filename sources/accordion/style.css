@@ -1,0 +1,45 @@
+
+@import url(../assets/css/reset.css);
+
+:root {
+    /* color */
+    --beige-color: beige;
+
+    /* fontsize */
+    --font-large: 20px;
+    --font-medium: 16px;
+    --font-small: 12px;
+    --font-micro: 9px;
+}
+
+/* accordion */
+.acco-wrap .acco  {
+    width: 100%;
+    border: 1px solid #000;
+}
+.acco-wrap .acco > li:first-child {
+    border-top: none;
+}
+.acco-wrap .acco .acco-btn a {
+    display: block;
+    padding: 5px;
+    background-color: var(--beige-color);
+    border-bottom: 1px solid #000;
+    font-size: var(--font-medium);
+}
+.acco-wrap .acco .acco-cont {
+    display: none;
+    padding: 5px;
+    font-size: var(--font-micro);
+    border-bottom: 1px solid #000;
+}
+.acco-wrap .acco li.active .acco-cont {
+    display: block;
+}
+.acco-wrap .acco li:last-child .acco-btn a,
+.acco-wrap .acco li:last-child .acco-cont {
+    border-bottom: none;
+}
+.acco-wrap .acco li.active:last-child .acco-btn a {
+    border-bottom: 1px solid #000;
+}
