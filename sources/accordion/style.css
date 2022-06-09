@@ -13,33 +13,35 @@
 }
 
 /* accordion */
-.acco-wrap .acco  {
+.acco1  {
     width: 100%;
     border: 1px solid #000;
+    background-color: var(--beige-color);
 }
-.acco-wrap .acco > li:first-child {
+.acco1 > li:first-child {
     border-top: none;
 }
-.acco-wrap .acco .acco-btn a {
+.acco1 .btn {
     display: block;
     padding: 5px;
-    background-color: var(--beige-color);
     border-bottom: 1px solid #000;
     font-size: var(--font-medium);
+    font-weight: bold;
+    cursor: pointer;
 }
-.acco-wrap .acco .acco-cont {
+.acco1 .cont {
     display: none;
-    padding: 5px;
-    font-size: var(--font-micro);
+    padding: 15px 5px;
+    font-size: var(--font-small);
     border-bottom: 1px solid #000;
 }
-.acco-wrap .acco li.active .acco-cont {
+.acco1 li.active .cont {
     display: block;
 }
-.acco-wrap .acco li:last-child .acco-btn a,
-.acco-wrap .acco li:last-child .acco-cont {
+.acco1 li:last-child .btn,
+.acco1 li:last-child .cont {
     border-bottom: none;
 }
-.acco-wrap .acco li.active:last-child .acco-btn a {
+.acco1 li.active:last-child .btn {
     border-bottom: 1px solid #000;
 }
