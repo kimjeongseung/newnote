@@ -13,15 +13,20 @@
 }
 
 /* accordion */
-.acco1  {
+
+[class*="acco-wrap"] {
+    margin-top: 20px;
+}
+.acco-wrap  {
     width: 100%;
     border: 1px solid #000;
     background-color: var(--beige-color);
 }
-.acco1 > li:first-child {
+.acco-wrap > li:first-child {
     border-top: none;
 }
-.acco1 .btn {
+.acco-wrap .btn {           
+    position: relative;
     display: block;
     padding: 5px;
     border-bottom: 1px solid #000;
@@ -29,19 +34,83 @@
     font-weight: bold;
     cursor: pointer;
 }
-.acco1 .cont {
+.acco-wrap .cont {
     display: none;
     padding: 15px 5px;
     font-size: var(--font-small);
     border-bottom: 1px solid #000;
 }
-.acco1 li.active .cont {
+.acco-wrap li.active .cont {
     display: block;
 }
-.acco1 li:last-child .btn,
-.acco1 li:last-child .cont {
+.acco-wrap li.active:last-child .btn {
+    border-bottom: 1px solid #000;
+}
+.acco-wrap li:last-child .btn,
+.acco-wrap li:last-child .cont {
     border-bottom: none;
 }
-.acco1 li.active:last-child .btn {
-    border-bottom: 1px solid #000;
+
+.acco1 .btn:before {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    transform: rotate(-135deg);
+    transition: .3s;
+    content: '';
+}
+.acco1 li.active .btn:before {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.acco2 .btn:before {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 14px;
+    height: 2px;
+    background: #000;
+    transition: .3s;
+    content: '';
+}
+.acco2 li.active .btn:before {
+    top: 10px;
+}
+.acco2 .btn:after {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 14px;
+    height: 2px;
+    background: #000;
+    transform: rotate(-90deg);
+    transition: .3s;
+    content: '';
+}
+.acco2 li.active .btn:after {
+    top: 10px;
+    transform: rotate(0deg);
+}
+
+.acco3 .btn:before {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    transform: rotate(-135deg);
+    transition: .3s;
+    content: '';
+}
+.acco3 li.active .btn:before {
+    top: 10px;
+    transform: rotate(45deg);
+    border-color: #aaa;
 }
