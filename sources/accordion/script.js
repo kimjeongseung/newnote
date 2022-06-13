@@ -29,17 +29,30 @@ $(function(){
 
 	//acco3
 	$('.acco3 .btn').on('click',function() {
-		if ($(this).parent('li').hasClass('active')) {
-			$(this).parents('.acco-wrap').find('.cont').slideUp();
-			// $(this).siblings().slideUp();
-			$(this).parent('li').removeClass('active');
+		let accoLi = $(this).parent('li'),
+			accAllLi = $(this).parents('.acco-wrap').find('li'),
+			accoCont = $(this).parents('.acco-wrap').find('.cont'),
+			className = 'active';
 			
+		if (accoLi.hasClass(className)) {
+			accoClose();
+			accoLi.removeClass(className);
 		} else {
-			$(this).parents('.acco-wrap').find('.cont').slideUp();
+			accoClose();
 			$(this).siblings().slideDown();
-			$(this).parent('li').addClass('active');
-			
+			accoLi.addClass(className);
 		}
-		
+
+		function accoClose() {
+			accoCont.slideUp();
+			accAllLi.removeClass(className);
+		}
 	})
+
+	// toggle 
+	$('.toggle-wrap').on('click','.btn',function() {
+		$(this).siblings().slideToggle();
+		$(this).parent('.toggle-wrap').toggleClass('active')
+	})
+
 });
