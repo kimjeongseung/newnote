@@ -30,9 +30,15 @@ $(function(){
 	//acco3
 	$('.acco3 .btn').on('click',function() {
 		if ($(this).parent('li').hasClass('active')) {
-
+			$(this).parents('.acco-wrap').find('.cont').slideUp();
+			// $(this).siblings().slideUp();
+			$(this).parent('li').removeClass('active');
+			
 		} else {
-			$(this).sibling().slideDown();
+			$(this).parents('.acco-wrap').find('.cont').slideUp();
+			$(this).siblings().slideDown();
+			$(this).parent('li').addClass('active');
+			
 		}
 		
 	})
