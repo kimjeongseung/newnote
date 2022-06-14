@@ -39,27 +39,17 @@
 }
 
 /* tab2 */
-.tab2 .menu-wrap {
-    position: relative;
-}
-.tab2 .menu-wrap:before {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: calc(100% / 5);
-    height: 2px;
-    background-color: blue;
-    transition: .3s;
-    content: attr(active);
-}
 .tab2 .menu {
+    position: relative;
     display: flex;
     flex-wrap: nowrap; 
 }
 .tab2 .menu > li {
     position: relative;
     flex: 1;
+}
+.tab2 .menu > li + li {
+    border-left: 1px solid #000;
 }
 .tab2 .menu > li > a {
     display: block;

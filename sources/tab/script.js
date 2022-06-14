@@ -1,5 +1,4 @@
 $(function(){
-
     // tab1
     function tab1() {
         let tabMenu = $('.tab1').find('.menu li a');
