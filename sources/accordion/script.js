@@ -3,6 +3,7 @@ $(function(){
 	$('.acco1 .btn').on('click',function() {
 		let accoLi = $(this).parent('li'),
 			className = 'active';
+			
 		if (accoLi.hasClass(className)) {
 			accoLi.removeClass(className)
 		} else {
@@ -15,6 +16,7 @@ $(function(){
 		let accoLi = $(this).parent('li'),
 			accoAllLi = $(this).parents('.acco-wrap').find('li'),
 			className = 'active';
+
 		if (accoLi.hasClass(className)) {
 			removeActive();
 		} else {
@@ -22,7 +24,7 @@ $(function(){
 			accoLi.addClass(className);
 		}		
 
-		function removeActive(){
+		function removeActive() {
 			accoAllLi.removeClass(className);
 		}
 	})
@@ -33,10 +35,9 @@ $(function(){
 			accAllLi = $(this).parents('.acco-wrap').find('li'),
 			accoCont = $(this).parents('.acco-wrap').find('.cont'),
 			className = 'active';
-			
+
 		if (accoLi.hasClass(className)) {
 			accoClose();
-			accoLi.removeClass(className);
 		} else {
 			accoClose();
 			$(this).siblings().slideDown();
@@ -44,8 +45,8 @@ $(function(){
 		}
 
 		function accoClose() {
-			accoCont.slideUp();
 			accAllLi.removeClass(className);
+			accoCont.slideUp();
 		}
 	})
 
@@ -54,5 +55,4 @@ $(function(){
 		$(this).siblings().slideToggle();
 		$(this).parent('.toggle-wrap').toggleClass('active')
 	})
-
 });
