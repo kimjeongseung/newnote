@@ -33,18 +33,16 @@ $(function(){
 
     // tab3
     function tab3() {
-        let liWid = $('.tab3 .menu li').width();
+        const liWid = $('.tab3 .menu li').width();
         $('.tab3').prepend('<div class="line"></div>')
                 
         $('.tab3 .menu li a').on('click',function(e) {
             e.preventDefualt;            
-            let tabMenu = $(this).parent(),
-                thisIndex = tabMenu.index(),
+            const tabMenu = $(this).parent(),
                 tisCont = $(this).parents('.tab3').find('.cont li');
+            let thisIndex = tabMenu.index();
             
-            $('.line').css({
-                left : liWid * thisIndex
-            })
+            $('.line').css('left', liWid * thisIndex);
             tabMenu.siblings().removeClass('active');
             tabMenu.addClass('active');
             tisCont.removeClass('active').hide();
