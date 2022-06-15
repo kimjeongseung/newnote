@@ -30,4 +30,26 @@ $(function(){
         })
     }
     tab2();
+
+    // tab3
+    function tab3() {
+        let liWid = $('.tab3 .menu li').width();
+        $('.tab3').prepend('<div class="line"></div>')
+                
+        $('.tab3 .menu li a').on('click',function(e) {
+            e.preventDefualt;            
+            let tabMenu = $(this).parent(),
+                thisIndex = tabMenu.index(),
+                tisCont = $(this).parents('.tab3').find('.cont li');
+            
+            $('.line').css({
+                left : liWid * thisIndex
+            })
+            tabMenu.siblings().removeClass('active');
+            tabMenu.addClass('active');
+            tisCont.removeClass('active').hide();
+            tisCont.eq(thisIndex).slideDown().addClass('active');
+        })
+    }
+    tab3();
 })

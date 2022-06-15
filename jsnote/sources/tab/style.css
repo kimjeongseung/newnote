@@ -1,7 +1,7 @@
-@import url(../assets/css/reset.css);
+@import url(../../assets/css/reset.css);
 
 [class*="tab-wrap"] {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 /* tab1 */
@@ -26,6 +26,7 @@
 }
 .tab1 .menu > li.active > a {
     color: blue;
+    pointer-events: none;
 }
 .tab1 .cont > li {
     display: none;
@@ -43,6 +44,7 @@
     position: relative;
     display: flex;
     flex-wrap: nowrap; 
+    border: 1px solid #000;
 }
 .tab2 .menu > li {
     position: relative;
@@ -61,6 +63,7 @@
 }   
 .tab2 .menu > li.active > a {
     color: blue;
+    pointer-events: none;
 }
 .tab2 .cont > li {
     display: none;
@@ -70,4 +73,49 @@
 }
 .tab2 .cont > li.active {
     display: block;
+}
+
+/* tab3 */
+.tab3 {
+    position: relative;
+}
+.tab3 .menu {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap; 
+}
+.tab3 .menu > li {
+    position: relative;
+    flex: 1;
+}
+.tab3 .menu > li > a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}   
+.tab3 .menu > li.active > a {
+    color: blue;
+    pointer-events: none;
+}
+.tab3 .cont > li {
+    display: none;
+    height: 50px;
+    padding: 5px;
+    background-color: #ddd;
+}
+.tab3 .cont > li.active {
+    display: block;
+}
+.tab3 .line {
+    position: absolute;
+    left: 0;
+    top: 26px;
+    display: block;
+    width: calc(100% / 5);
+    height: 2px;
+    background-color: blue;
+    transition: .3s;
 }
