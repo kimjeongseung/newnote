@@ -39,15 +39,28 @@ $(function(){
         $('.tab3 .menu li a').on('click',function(e) {
             e.preventDefualt;            
             const tabMenu = $(this).parent(),
-                tisCont = $(this).parents('.tab3').find('.cont li');
+                thisCont = $(this).parents('.tab3').find('.cont li');
             let thisIndex = tabMenu.index();
             
-            $('.line').css('left', liWid * thisIndex);
+            tabMenu.parent().siblings('.line').css('left', liWid * thisIndex);
             tabMenu.siblings().removeClass('active');
             tabMenu.addClass('active');
-            tisCont.removeClass('active').hide();
-            tisCont.eq(thisIndex).slideDown().addClass('active');
+            thisCont.removeClass('active').hide();
+            thisCont.eq(thisIndex).slideDown().addClass('active');
         })
     }
     tab3();
+
+    //tab4
+    function tab4() {
+        const winWid = $(window).width(),
+                tabLiWid = $('.tab4 .menu li').width(),
+                tabLiLen = $('.tab4 .menu li').length,
+                tabMenuWid = tabLiWid * tabLiLen;
+
+        if(winWid < tabMenuWid) {
+
+        }
+    }
+    tab4();
 })

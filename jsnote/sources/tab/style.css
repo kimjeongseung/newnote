@@ -119,3 +119,62 @@
     background-color: blue;
     transition: .3s;
 }
+
+/* tab4 */
+.tab4 {
+    position: relative;
+}
+.tab4 .menu {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap; 
+}
+.tab4 .menu > li {
+    position: relative;
+    flex: 1;
+}
+.tab4 .menu > li > a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}   
+.tab4 .menu > li.active > a {
+    color: blue;
+    pointer-events: none;
+}
+.tab4 .cont > li {
+    display: none;
+    height: 50px;
+    padding: 5px;
+    background-color: #ddd;
+}
+.tab4 .cont > li.active {
+    display: block;
+}
+.tab4 .line {
+    position: absolute;
+    left: 0;
+    top: 26px;
+    display: block;
+    width: calc(100% / 5);
+    height: 2px;
+    background-color: blue;
+    transition: .3s;
+}
+
+@media screen and (max-width: 400px) {
+    .tab4 .menu-outer {
+        overflow-x: auto;
+    }
+    .tab4 .menu {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .tab4 .menu > li {
+        display: inline-block;
+    }
+}
