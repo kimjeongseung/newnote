@@ -10,7 +10,7 @@
     flex-wrap: nowrap;
 }
 .tab1 .menu > li {
-    flex-grow: 1;
+    flex: 1;
     border: 1px solid #000;
 }
 .tab1 .menu > li+li {
@@ -41,13 +41,11 @@
 
 /* tab2 */
 .tab2 .menu {
-    position: relative;
     display: flex;
     flex-wrap: nowrap; 
     border: 1px solid #000;
 }
 .tab2 .menu > li {
-    position: relative;
     flex: 1;
 }
 .tab2 .menu > li + li {
@@ -80,12 +78,10 @@
     position: relative;
 }
 .tab3 .menu {
-    position: relative;
     display: flex;
     flex-wrap: nowrap; 
 }
 .tab3 .menu > li {
-    position: relative;
     flex: 1;
 }
 .tab3 .menu > li > a {
@@ -121,16 +117,11 @@
 }
 
 /* tab4 */
-.tab4 {
-    position: relative;
-}
 .tab4 .menu {
-    position: relative;
     display: flex;
     flex-wrap: nowrap; 
 }
 .tab4 .menu > li {
-    position: relative;
     flex: 1;
 }
 .tab4 .menu > li > a {
@@ -143,7 +134,7 @@
 }   
 .tab4 .menu > li.active > a {
     color: blue;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 .tab4 .cont > li {
     display: none;
@@ -167,14 +158,18 @@
 
 @media screen and (max-width: 400px) {
     .tab4 .menu-outer {
-        overflow-x: auto;
+        overflow: auto;
+        white-space: nowrap;
     }
     .tab4 .menu {
         display: block;
-        overflow-x: auto;
-        white-space: nowrap;
     }
     .tab4 .menu > li {
         display: inline-block;
     }
 }
+
+
+
+
+

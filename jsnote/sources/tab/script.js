@@ -45,22 +45,17 @@ $(function(){
             tabMenu.parent().siblings('.line').css('left', liWid * thisIndex);
             tabMenu.siblings().removeClass('active');
             tabMenu.addClass('active');
-            thisCont.removeClass('active').hide();
-            thisCont.eq(thisIndex).slideDown().addClass('active');
+            thisCont.removeClass('active').hide().eq(thisIndex).slideDown().addClass('active');
         })
     }
     tab3();
 
-    //tab4
+    // tab4
     function tab4() {
-        const winWid = $(window).width(),
-                tabLiWid = $('.tab4 .menu li').width(),
-                tabLiLen = $('.tab4 .menu li').length,
-                tabMenuWid = tabLiWid * tabLiLen;
-
-        if(winWid < tabMenuWid) {
-
-        }
-    }
+        
+    }   
     tab4();
+
+
+
 })
