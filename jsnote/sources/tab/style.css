@@ -117,12 +117,19 @@
 }
 
 /* tab4 */
+.tab4 .menu-outer {
+    overflow: auto;
+    white-space: nowrap;
+}
 .tab4 .menu {
+    position: relative;
     display: flex;
     flex-wrap: nowrap; 
 }
 .tab4 .menu > li {
+    position: relative;
     flex: 1;
+    display: inline-block;
 }
 .tab4 .menu > li > a {
     display: block;
@@ -154,19 +161,6 @@
     height: 2px;
     background-color: blue;
     transition: .3s;
-}
-
-@media screen and (max-width: 400px) {
-    .tab4 .menu-outer {
-        overflow: auto;
-        white-space: nowrap;
-    }
-    .tab4 .menu {
-        display: block;
-    }
-    .tab4 .menu > li {
-        display: inline-block;
-    }
 }
 
 
