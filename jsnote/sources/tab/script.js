@@ -82,21 +82,16 @@ $(function(){
 
             if (selectPos < boxHalf) {
                 pos = 0;
-                console.log(pos)
             } else if (liWid - selectPos < boxHalf) {
                 pos = liWid - boxWid;
-                console.log(pos)
             } else {
                 pos = selectPos - boxHalf;
-                console.log(pos)
             }
-
-            $('.tab4 .menu').stop().animate({scrollLeft:pos});
-
 
             $(this).parent().siblings().removeClass('active');
             $(this).parent().addClass('active');
 
+            $('.tab4 .menu').animate({scrollLeft:pos});
             
         })
     }   

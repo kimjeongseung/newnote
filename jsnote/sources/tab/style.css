@@ -125,6 +125,7 @@
     position: relative;
     display: flex;
     flex-wrap: nowrap; 
+    overflow: auto;
 }
 .tab4 .menu > li {
     position: relative;
