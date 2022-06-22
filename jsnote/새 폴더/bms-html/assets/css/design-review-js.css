@@ -1,0 +1,115 @@
+.design-review-view {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.design-review-view .review-info {
+    width: 640px;
+    padding: 80px;
+    background-color: #F6F3F2;
+}
+.design-review-view .review-info > .brand {
+    display: block;
+    margin-bottom: 16px;
+    color: #777;
+    font-size: 18px;
+    line-height: 23px;
+}
+.design-review-view .review-info .progress {
+    margin-top: 24px;
+    color: #002C5F;
+    font-size: 18px;
+    line-height: 30px;
+}
+.design-review-view .review-info .progress > span {
+    display: inline-block;
+    margin-right: 8px;
+    color: #333;
+    font-size: 18px;
+    line-height: 30px;
+}
+.design-review-view .review-info .info-list {
+    margin-top: 56px;
+}
+.design-review-view .review-info .info-list > li + li {
+    margin-top: 40px;
+}
+.design-review-view .review-info .info-list > li  {
+    color: #777;
+    font-size: 16px;
+    line-height: 24px;
+}
+.design-review-view .review-info .info-list > li > strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.design-review-view .timeline {
+    padding: 80px;
+}
+.design-review-view .timeline .list .top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.design-review-view .timeline .list .top .name-cont {
+    position: relative;
+}
+.design-review-view .timeline .list .top .name-cont .name {
+    color: #002C5F;
+    font-size: 24px;
+    font-weight:500;
+    line-height: 32px;
+}
+.design-review-view .timeline .list .top .name-cont > .name:hover {
+    color: #00AAD2;
+    text-decoration-line: underline;
+}
+.design-review-view .timeline .list .top .name-cont > .name:hover + .tooltip {
+    display: block;
+}
+.design-review-view .timeline .list .top .name-cont .tooltip {
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 360px;
+    height: 174px;
+    padding: 32px 40px;
+    margin-left: 16px;
+    background: #353535;
+}
+.design-review-view .timeline .list .top .name-cont .tooltip em {
+    display: block;
+    margin-bottom: 16px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+.design-review-view .timeline .list .top .name-cont .tooltip span {
+    display: block;
+    color: #E9E9E9;
+    font-size: 16px;
+    line-height: 24px;
+}
+.design-review-view .timeline .list .top .name-cont .tooltip span + span {
+    margin-top: 8px;
+}
+.design-review-view .timeline .list .top .date {
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+} 
+.design-review-view .timeline .list .txt-cont {
+    height: 240px;
+    margin-top: 40px;
+}
+.design-review-view .timeline .list .txt-cont > p {
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+}
