@@ -243,12 +243,6 @@
 }
 /* E: join 페이지 */
 
-/* S: join complete 페이지 */
-.join-complete .complete-area .btn{
-  margin-top: 72px;
-}
-/* E: join complete 페이지 */
-
 /* S: account activation 페이지 */
 .account-activation .tit-box{
   text-align: center;
@@ -268,7 +262,7 @@
   margin-top: 0;
 }
 .account-activation .form-outer .input-outer-box{
-  max-width: 380px;
+  max-width: 370px;
   margin: 32px auto 0;
 }
 .account-activation .form-outer .btn.w200{
@@ -300,7 +294,7 @@
   margin-top: 68px;
 }
 .contactus .form-outer .cta-outer{
-  margin-top: 80px;
+  margin-top: 90px;
 }
 /* E: contact us 페이지 */
 
@@ -335,7 +329,7 @@
   margin-top: 80px;
 }
 .glossary .pagination{
-  margin-top: 80px;
+  margin-top: 60px;
 }
 /* E: glossary 페이지 */
 
@@ -396,9 +390,9 @@
 .inquiry-list .tbl-box tr:hover td {
   background-color: #fafafa;
 }
-.inquiry-list .tbl-box tr:hover td.td-tit {
-  text-decoration: underline;
-}
+/*.inquiry-list .tbl-box tr:hover td.td-tit {*/
+/*  text-decoration: underline;*/
+/*}*/
 .inquiry-list .tbl-box .td-tit {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -805,28 +799,37 @@
 }
 /* E: find_password 페이지 */
 
-/* S: change_password 페이지 */
-.change-password .new-pw{
+/* S: change_password , change_password02 페이지 공통*/
+.change-password .new-pw , .change-password02 .new-pw{
   margin-bottom: 32px;
 }
-/* E: change_password 페이지 */
+.change-password .cta-outer , .change-password02 .cta-outer{
+  margin-top: 90px;
+}
+/* E: change_password , change_password02 페이지 공통 */
 
 /* S: change_password02 페이지 */
-
-/* E: change_password02 페이지 */
-
-/* S: send_file , file_details , forward_file 페이지 공통*/
-.file-all .tit-box{
-  margin-top: 92px;
-  text-align: center;
-  margin-bottom: 106px;
-}
-.file-all .tit-box h1{
+.change-password02 .input-outer-box:last-child{
   margin-bottom: 16px;
 }
+.change-password02 .pw-caution-wrap{
+  width: fit-content;
+  margin: 0 auto;
+}
+/* E: change_password02 페이지 */
+
+/* S: share_file_list, send_file , file_details , forward_file 페이지 공통*/
+.file-all .tit-box{
+  margin-top: 97px;
+  text-align: center;
+  margin-bottom: 188px;
+}
+.file-all .tit-box h1{
+  margin-bottom: 11px;
+}
 .file-all .calendar{
-  margin-top: 40px;
-  margin-bottom: 32px;
+  margin-top: 56px;
+  margin-bottom: 60px;
 }
 .file-all .calendar label{
   font-size: 16px;
@@ -836,9 +839,19 @@
   color: #333;
 }
 .file-all .cta-outer{
-  margin-top: 80px;
+  margin-top: 90px;
 }
-/* E: send_file , file_details , forward_file 페이지 공통*/
+/* E: share_file_list, send_file , file_details , forward_file 페이지 공통*/
+
+/* S: share_file_list 페이지 */
+.share-file-list .tbl-box tbody .td-tit,
+.share-file-list .tbl-box tbody .td-user{
+  text-align: left;
+}
+.share-file-list .tab-box-item .pagination{
+  margin-top: 60px;
+}
+/* E: share_file_list 페이지 */
 
 /* S: file_details 페이지 */
 .send-file .textarea-box{
@@ -854,6 +867,9 @@
 /* E: file_details 페이지 */
 
 /* S: forward_file 페이지 */
+.forward-file .calendar{
+  margin-top: 40px;
+}
 .forward-file input::placeholder, .forward-file textarea::placeholder{
   color: #333;
 }
@@ -873,4 +889,17 @@
 .pop-employees .input-outer-box .btn {
   margin-left: 8px;
 }
+.pop-employees tr.no-data td {
+  text-align: center;
+  padding: 50px 0;
+}
+.pop-employees tr.no-data:hover td {
+  background-color: #fff;
+}
 /* E: popup employees */
+
+/* S: bts_list 페이지 */
+.bts-list .tit-box{
+  margin-top: 90px;
+}
+/* E: bts_list 페이지 */
