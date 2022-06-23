@@ -8,8 +8,8 @@
 
   <link rel="stylesheet" href="../../assets/css/common.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../assets/css/design-review.css"><!-- 지우기 -->
-  <link rel="stylesheet" href="../../assets/css/design-review-js.css">
+  <link rel="stylesheet" href="../../assets/css/design-review.css"><!-- 취합예정 -->
+  <link rel="stylesheet" href="../../assets/css/design-review-js.css"><!-- 취합예정 -->
 
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
   <script type="text/javascript" src="../../assets/js/lib/common-lib.js"></script>
@@ -246,40 +246,22 @@
               <button class="btn btn-type2"><span>More</span></button>
             </div>
             <div class="comment-box">
-              <button type="button" class="btn">코멘트 남기기</button>
-              <div class="cont">
-                <strong class="tit">코멘트</strong>
-                <div class="txt-cont">
-                  <textarea class="txtarea" placeholder="내용을 입력하세요."></textarea>
-                  <div class="add-file">
-                    <label for="addfile">첨부파일</label>
-                    <input type="file" id="addfile" class="inpfile" readonly>
-                    <div class="switch-item-list"></div>
+              <div class="inner">
+                <button type="button" class="btn">코멘트 남기기</button>
+                <div class="cont">
+                  <strong class="tit">코멘트</strong>
+                  <div class="txt-cont">
+                    <textarea class="txtarea" placeholder="내용을 입력하세요."></textarea>
+                    <div class="add-file">
+                      <label for="addfile">첨부파일</label>
+                      <input type="file" id="addfile" class="inpfile">
+                      <div class="switch-item-list"></div>
+                    </div>
                   </div>
-                </div>
-                <div class="cta-outer">
-                  <label class="chk"><input type="checkbox"><span>피드백 대기</span></label>
-                  <button class="btn btn-middle-small"><span>등록</span></button>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="comment-box">
-              <button type="button" class="btn">코멘트 남기기</button>
-              <div class="cont">
-                <strong class="tit">코멘트</strong>
-                <div class="txt-cont">
-                  <textarea class="txtarea" placeholder="내용을 입력하세요."></textarea>
-                  <div class="add-file">
-                    <label for="addfile2">첨부파일</label>
-                    <input type="file" id="addfile2" class="inpfile" readonly>
-                    <div class="switch-item-list"></div>
+                  <div class="cta-outer">
+                    <label class="chk"><input type="checkbox"><span>피드백 대기</span></label>
+                    <button class="btn btn-middle-small"><span>등록</span></button>
                   </div>
-                </div>
-                <div class="cta-outer">
-                  <label class="chk"><input type="checkbox"><span>피드백 대기</span></label>
-                  <button class="btn btn-middle-small"><span>등록</span></button>
                 </div>
               </div>
             </div>
@@ -346,9 +328,9 @@
           btnMore.on('click', function() {
             let thisTxtH = $(this).siblings().outerHeight();
             if (thisTxtH >= minHeight){
-                $(this).text(btnTxt1).parent().addClass('short');
+                txtCont.eq(i).find(btnMore).text(btnTxt1).parent().addClass('short');
               } else {
-                $(this).text(btnTxt2).parent().removeClass('short');
+                txtCont.eq(i).find(btnMore).text(btnTxt2).parent().removeClass('short');
               }
             })
           } 
@@ -356,6 +338,7 @@
     }
     txtMore();
 
+    // comment file
     function addFile() {
       let addFile = designReviewView.find('.comment-box input[type="file"]'),
           filename,
