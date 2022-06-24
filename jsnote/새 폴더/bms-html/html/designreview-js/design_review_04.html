@@ -247,7 +247,7 @@
             </div>
             <div class="comment-box">
               <div class="inner">
-                <button type="button" class="btn">코멘트 남기기</button>
+                <button type="button" class="btn-comment">코멘트 남기기</button>
                 <div class="cont">
                   <strong class="tit">코멘트</strong>
                   <div class="txt-cont">
@@ -262,6 +262,7 @@
                     <label class="chk"><input type="checkbox"><span>피드백 대기</span></label>
                     <button class="btn btn-middle-small"><span>등록</span></button>
                   </div>
+                  <button type="button" class="btn-close">닫기</button>
                 </div>
               </div>
             </div>
@@ -337,6 +338,23 @@
         }
     }
     txtMore();
+
+    // comment open
+    function commentOpen() {
+      let openBtn = designReviewView.find('.comment-box .btn-comment'),
+          closeBtn = designReviewView.find('.comment-box .btn-close');
+      openBtn.on('click', function() {
+        $(this).fadeToggle().next('.cont').slideToggle();
+      })
+      closeBtn.on('click',function() {
+        let thisCont = $(this).parent('.cont');
+        if(thisCont.css('display') == 'block') {
+          thisCont.slideToggle();
+          $(this).parents('.comment-box').find('.btn-comment').fadeToggle();
+        }
+      })
+    }
+    commentOpen();
 
     // comment file
     function addFile() {
