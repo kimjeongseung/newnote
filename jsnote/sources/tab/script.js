@@ -63,6 +63,7 @@ $(function(){
             e.preventDefualt;
             
             let target = $(this).parent(),
+                idx = target.index(),
                 liWid = 0,
                 boxWid = $('.menu-outer').outerWidth(),
                 boxHalf = $('.menu-outer').outerWidth() / 2,
@@ -92,6 +93,8 @@ $(function(){
             $(this).parent().addClass('active');
 
             $('.tab4 .menu').animate({scrollLeft:pos});
+
+            $(this).parents('.tab-wrap').find('.cont li').siblings().removeClass('active').eq(idx).addClass('active');
             
         })
     }   
